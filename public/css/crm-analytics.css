@@ -1,0 +1,56 @@
+/* Analytics Page Specific Styles */
+.analytics-filters {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.analytics-filters label {
+  font-weight: bold;
+}
+
+.analytics-filters select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background-color: var(--card-bg, #fff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-card h3 {
+  margin-top: 0;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.chart-container {
+  background-color: var(--card-bg, #fff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

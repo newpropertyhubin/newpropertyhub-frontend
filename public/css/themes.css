@@ -1,0 +1,152 @@
+/* Default Theme (Light) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #007bff;
+  --secondary-color: #f4f4f4;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --primary-color: #bb86fc;
+  --secondary-color: #1e1e1e;
+}
+
+/* Blue Theme */
+[data-theme="blue"] {
+  --bg-color: #e6f0ff;
+  --text-color: #002244;
+  --primary-color: #0056b3;
+  --secondary-color: #cce0ff;
+}
+
+/* Green Theme */
+[data-theme="green"] {
+  --bg-color: #eaffea;
+  --text-color: #003300;
+  --primary-color: #009933;
+  --secondary-color: #ccffcc;
+}
+
+/* Apply theme variables globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+button, .btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+/* ========================
+   Theme Variables
+   ======================== */
+
+/* Light Theme (default) */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #1976d2; /* blue */
+  --secondary-color: #f5f5f5;
+  --card-bg: #ffffff;
+  --button-bg: #1976d2;
+  --button-text: #ffffff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #bb86fc; /* purple */
+  --secondary-color: #1e1e1e;
+  --card-bg: #1f1f1f;
+  --button-bg: #bb86fc;
+  --button-text: #000000;
+}
+
+/* Classic Theme */
+[data-theme="classic"] {
+  --bg-color: #fdf6e3;
+  --text-color: #3e2723;
+  --primary-color: #795548; /* brown */
+  --secondary-color: #f0e5d8;
+  --card-bg: #fffaf0;
+  --button-bg: #795548;
+  --button-text: #ffffff;
+}
+
+/* Modern Theme */
+[data-theme="modern"] {
+  --bg-color: #f4f6f9;
+  --text-color: #1a237e;
+  --primary-color: #3949ab; /* indigo */
+  --secondary-color: #e8eaf6;
+  --card-bg: #ffffff;
+  --button-bg: #3949ab;
+  --button-text: #ffffff;
+  --border-radius: 12px;
+}
+
+/* Insta Theme */
+[data-theme="insta"] {
+  --bg-color: #fafafa;
+  --text-color: #262626;
+  --primary-color: linear-gradient(45deg, #fd1d1d, #fcb045, #833ab4);
+  --secondary-color: #f0f0f0;
+  --card-bg: #ffffff;
+  --button-bg: linear-gradient(45deg, #fd1d1d, #fcb045, #833ab4);
+  --button-text: #ffffff;
+}
+
+/* ========================
+   Global Styles
+   ======================== */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+header, footer {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: var(--border-radius, 8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius, 6px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+}

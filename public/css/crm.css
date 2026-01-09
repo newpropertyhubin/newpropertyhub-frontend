@@ -1,0 +1,261 @@
+/* Reminders Section */
+#remindersSection {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+#remindersSection h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#remindersList li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* CRM Specific Styles */
+
+/* Kanban Board Styles */
+.kanban-board {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    min-height: 500px;
+    align-items: flex-start; /* Align columns to the top */
+}
+
+.kanban-column {
+    flex: 0 0 280px; /* Fixed width for columns */
+    max-width: 280px;
+    background-color: #e9edf0;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.kanban-column h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d1d9e0;
+    font-size: 1.1em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.kanban-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    cursor: grab;
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.kanban-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.kanban-card.dragging {
+    opacity: 0.5;
+    transform: rotate(3deg) scale(1.02);
+}
+
+.kanban-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.kanban-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.kanban-card .card-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.kanban-card .follow-up {
+    font-size: 0.8em;
+    color: #d9534f; /* Reddish color for attention */
+}
+
+.kanban-card .staff {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 10px;
+    display: block;
+}
+
+.kanban-card .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #aaa;
+}
+.kanban-card .delete-btn:hover {
+    color: #f00;
+}
+
+/* Modal Styles (re-used from general style.css if available, but defined here for CRM specific modal) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content input[type="email"],
+.modal-content input[type="number"],
+.modal-content textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#editTasksChecklist label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+#editTasksChecklist input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filters label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.filters select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+}
+
+/* Analytics Page Styles */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background-color: var(--card-bg, #fff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.kpi-card h3 {
+  margin-top: 0;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.chart-container {
+  background-color: var(--card-bg, #fff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
